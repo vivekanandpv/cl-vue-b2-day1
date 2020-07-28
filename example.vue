@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h3>Welcome {{name}}!</h3>
-    <p>Gender: {{gender}}</p>
-    <p>Position: {{position}}</p>
+    <input type="text" :class="cssClass" :value="name" />
   </div>
 </template>
 
@@ -11,8 +9,7 @@ export default {
   data: function () {
     return {
       name: "Rajendra",
-      gender: "Male",
-      position: "Senior Developer",
+      cssClass: "foo",
     };
   },
 };
