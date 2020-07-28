@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 v-show="position === 'developer'">{{name}} is a developer</h2>
+    <p v-for="(city, index) in cities" :key="index">{{index}}. {{city}}</p>
   </div>
 </template>
 
@@ -8,8 +8,7 @@
 export default {
   data: function () {
     return {
-      name: "Rajendra",
-      position: "janitor",
+      cities: ["Bengaluru", "Mumbai", "Chennai", "Delhi"],
     };
   },
 };
