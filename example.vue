@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{name}}</h2>
-    <input type="text" :class="cssClass" v-model="name" />
+    <input type="text" @input="inputHandler" :value="name" />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     return {
       name: "Rajendra",
     };
+  },
+  methods: {
+    inputHandler: function (e) {
+      this.name = e.target.value;
+    },
   },
 };
 </script>
