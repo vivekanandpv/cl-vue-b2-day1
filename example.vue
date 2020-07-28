@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>{{name}}</h2>
-    <input type="text" @input="inputHandler" :value="name" />
+    <h2 v-if="status">Predicate is true: {{name}}</h2>
+    <h2 v-else>Predicate is false: {{name}}</h2>
   </div>
 </template>
 
@@ -10,12 +10,8 @@ export default {
   data: function () {
     return {
       name: "Rajendra",
+      status: true,
     };
-  },
-  methods: {
-    inputHandler: function (e) {
-      this.name = e.target.value;
-    },
   },
 };
 </script>
