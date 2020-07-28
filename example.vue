@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h3>{{title}}</h3>
+    <hr />
     <p v-for="(city, index) in cities" :key="index">{{index}}. {{city}}</p>
   </div>
 </template>
@@ -9,6 +11,7 @@ export default {
   data: function () {
     return {
       cities: ["Bengaluru", "Mumbai", "Chennai", "Delhi"],
+      title: "Cities of India",
     };
   },
 };
