@@ -1,6 +1,7 @@
 <template>
   <div>
-    <input type="text" :class="cssClass" :value="name" />
+    <h2>{{name}}</h2>
+    <input type="text" :class="cssClass" v-model="name" />
   </div>
 </template>
 
@@ -9,7 +10,6 @@ export default {
   data: function () {
     return {
       name: "Rajendra",
-      cssClass: "foo",
     };
   },
 };
