@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h2 v-if="status">Predicate is true: {{name}}</h2>
-    <h2 v-else>Predicate is false: {{name}}</h2>
+    <h2 v-if="position === 'developer'">{{name}} is a developer</h2>
+    <h2 v-else-if="position === 'manager'">{{name}} is a manager</h2>
+    <h2 v-else>{{name}}; position unknown</h2>
   </div>
 </template>
 
@@ -10,7 +11,7 @@ export default {
   data: function () {
     return {
       name: "Rajendra",
-      status: true,
+      position: "janitor",
     };
   },
 };
