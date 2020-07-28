@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h2 v-if="position === 'developer'">{{name}} is a developer</h2>
-    <h2 v-else-if="position === 'manager'">{{name}} is a manager</h2>
-    <h2 v-else>{{name}}; position unknown</h2>
+    <h2 v-show="position === 'developer'">{{name}} is a developer</h2>
   </div>
 </template>
 
